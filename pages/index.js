@@ -6,11 +6,6 @@ class CampaignIndex extends Component {
         const campaigns = await factory.methods.getDeployedCampaigns().call();
         return { campaigns };
     }
-    
-    async componentDidMount() {
-        
-        console.log(campaigns);
-    };
 
     render() {
         return <div>{this.props.campaigns[0]}</div>
