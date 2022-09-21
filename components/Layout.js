@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import "semantic-ui-css/semantic.min.css";
 import { Container } from "semantic-ui-react";
 
 const Layout = (props) => {
@@ -7,7 +8,6 @@ const Layout = (props) => {
     <Container>
       <Header />
       {props.children}
-      <h1>I'm a footer</h1>
     </Container>
   );
 };
