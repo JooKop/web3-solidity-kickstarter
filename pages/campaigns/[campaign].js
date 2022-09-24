@@ -1,8 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import Layout from "../../components/Layout";
 import ContributeForm from "../../components/ContributeForm";
-import { Card, Grid } from "semantic-ui-react";
+import { Card, Grid, Button } from "semantic-ui-react";
 import Campaign from "../../ethereum/campaign";
 import web3 from "../../ethereum/web3";
 
@@ -69,6 +70,9 @@ const CampaignShow = (props) => {
       <Grid>
         <Grid.Column width={10}>
           <Card.Group items={items} />
+          <Link href={`/campaigns/${address}/requests`}>
+            <Button primary>Show Requests</Button>
+          </Link>
         </Grid.Column>
         <Grid.Column width={6}>
           <ContributeForm address={address} />
