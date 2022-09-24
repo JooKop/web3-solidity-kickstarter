@@ -18,6 +18,7 @@ export async function getServerSideProps(context) {
       requestsCount: summary[2],
       approversCount: summary[3],
       manager: summary[4],
+      address: address,
     },
   };
 }
@@ -29,6 +30,7 @@ const CampaignShow = (props) => {
     minimumContribution,
     requestsCount,
     approversCount,
+    address,
   } = props;
 
   const items = [
@@ -69,7 +71,7 @@ const CampaignShow = (props) => {
           <Card.Group items={items} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <ContributeForm />
+          <ContributeForm address={address} />
         </Grid.Column>
       </Grid>
     </Layout>
