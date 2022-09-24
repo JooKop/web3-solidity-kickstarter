@@ -33,7 +33,7 @@ const CampaignIndex = (props) => {
             icon="add circle"
             primary
           />
-        </Link>{" "}
+        </Link>
         {renderCampaigns()}
       </div>
     </Layout>
